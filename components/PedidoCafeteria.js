@@ -89,6 +89,7 @@ export default function PedidoCafeteria() {
         <View key={item.id} style={styles.item}>
           <Text style={{fontWeight: 'bold'}}>{item.nombre} - {item.producto}</Text>
           <Text>${item.precio} x {item.cantidad}</Text>
+        <Text>Observaciones: {item.observaciones ? item.observaciones : 'Sin observaciones'}</Text>
           <View style={{flexDirection: 'row', marginTop: 10, justifyContent: 'space-between'}}>
             <Button title="Editar" onPress={() => iniciarEdicion(item)} color="blue" />
             <Button title="Borrar" onPress={() => borrarPedido(item.id)} color="red" />
